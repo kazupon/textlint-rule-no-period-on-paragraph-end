@@ -5,7 +5,11 @@
   - [Pull Request Guidelines](#pull-request-guidelines)
     - [Work Step Example](#work-step-example)
   - [Development Setup](#development-setup)
-    - [Commonly used NPM scripts](#commonly-used-npm-scripts)
+    - [Lint](#lint)
+    - [Code Auto fix](#code-auto-fix)
+    - [Build](#build)
+    - [Tests](#tests)
+    - [Other script tasks](#other-script-tasks)
 
 ## Issue Reporting Guidelines
 
@@ -27,7 +31,7 @@
 
 - It's OK to have multiple small commits as you work on the PR - we will let GitHub automatically squash it before merging.
 
-- Make sure `npm test` passes. (see [development setup](#development-setup))
+- Make sure all script tasks passes. (see [development setup](#development-setup))
 
 - If adding new feature:
 
@@ -51,19 +55,48 @@
 
 After cloning the repo, run:
 
-    $ npm install
+```sh
+npm install
+```
 
-### Commonly used NPM scripts
+### Lint
 
-    # lint source codes
-    $ npm run lint
+lint checks for the following:
 
-    # code auto fix
-    $ npm run fix
+- Prettier follows the format of this project
+- ESLint follows the rules of this project
 
-    # run the full test suite, include linting
-    $ npm test
+```sh
+npm run lint
+```
+
+### Code Auto fix
+
+The following commands fix those detected by Prettier and ESLint described earlier, using their respective fix functions.
+
+```sh
+npm run fix
+```
+
+### Build
+
+Builds source codes for publish to the `lib` folder.
+
+You can write ES2015+ source codes in `src/` folder.
+
+```sh
+npm run build
+```
+
+### Tests
+
+Run test code in `test` folder.
+Test textlint rule by [textlint-tester](https://github.com/textlint/textlint-tester):
+
+```sh
+npm test
+```
+
+### Other script tasks
 
 There are some other scripts available in the `scripts` section of the `package.json` file.
-
-**Please make sure to have this pass successfully before submitting a PR.** Although the same tests will be run against your PR on the CI server, it is better to have it working locally beforehand.
