@@ -23,7 +23,7 @@ This paragraph has multiple sentences. First sentence is here. And the last sent
 ```
 This is simple paragraph
 
-This paragraph has multiple sentences. First sentence is here. And the last sentence is here.
+This paragraph has multiple sentences. First sentence is here. And the last sentence is here
 
 これはシンプルな段落
 

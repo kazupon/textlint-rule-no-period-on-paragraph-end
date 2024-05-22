@@ -65,14 +65,14 @@
   },
   "lint-staged": {
     "*.{json,md,yml}": [
-      "prettier --write"
+      "prettier --write --ignore-unknown"
     ],
     "*.{js,mjs,cjs}": [
-      "prettier --write",
+      "prettier --write --ignore-unknown",
       "eslint --fix"
     ],
     "*.ts?(x)": [
-      "prettier --parser=typescript --write",
+      "prettier --parser=typescript --write --ignore-unknown",
       "eslint --fix"
     ]
   }

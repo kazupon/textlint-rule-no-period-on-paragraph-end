@@ -1,28 +1,23 @@
 import type { TextlintRuleModule } from '@textlint/types'
 
-export interface Options {
-  // If node's text includes allowed text, does not report.
-  allows?: string[]
-}
+interface Options {}
 
-const report: TextlintRuleModule<Options> = (context, options = {}) => {
+const PERIODS = ['.', '。'] as const
+
+const report: TextlintRuleModule<Options> = (context, _options = {}) => {
   const { Syntax, RuleError, report, getSource, locator } = context
-  const allows = options.allows ?? []
   return {
-    [Syntax.Str](node) {
-      // "Str" node
-      const text = getSource(node) // Get text
-      if (allows.some(allow => text.includes(allow))) {
-        return
-      }
-      const matches = text.matchAll(/bugs/g)
-      for (const match of matches) {
-        const index = match.index ?? 0
-        const matchRange = [index, index + match[0].length] as const
-        const ruleError = new RuleError('Found bugs.', {
-          padding: locator.range(matchRange)
-        })
-        report(node, ruleError)
+    [Syntax.Paragraph](node) {
+      const text = getSource(node)
+      const period = PERIODS.find(period => text.endsWith(period))
+      if (period) {
+        const targetRange = [text.length - 1, text.length] as const
+        report(
+          node,
+          new RuleError('The paragraph has a period.', {
+            padding: locator.range(targetRange)
+          })
+        )
       }
     }
   }
