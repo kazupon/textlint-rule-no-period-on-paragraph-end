@@ -6,7 +6,7 @@ textlint rule for no period on paragraph end
 
 This rule does not allow punctuation at the end of a paragraph. This use case is used, for example, when you want to express rhythm or lingering phrases in a sentence, such as in the Japanese word "体言止め"(ending a sentence with a noun).
 
-### NG ✗
+### ❌ NG
 
 ```
 This is simple paragraph.
@@ -18,7 +18,7 @@ This paragraph has multiple sentences. First sentence is here. And the last sent
 この段落には複数の文がある。これが最初、そしてこれが最後の文。
 ```
 
-### OK ✓
+### ✅ OK
 
 ```
 This is simple paragraph
