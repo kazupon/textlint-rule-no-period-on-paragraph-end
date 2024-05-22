@@ -2,8 +2,20 @@
   "name": "textlint-rule-no-period-on-paragraph-end",
   "description": "textlint rule for no period on paragraph end",
   "version": "0.0.0",
-  "author": "",
+  "author": {
+    "name": "kazuya kawaguchi",
+    "email": "kawakazu80@gmail.com"
+  },
+  "homepage": "https://github.com/kazupon/textlint-rule-no-period-on-paragraph-end#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazupon/textlint-rule-no-period-on-paragraph-end.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kazupon/textlint-rule-no-period-on-paragraph-end/issues"
+  },
   "license": "MIT",
+  "funding": "https://github.com/sponsors/kazupon",
   "keywords": [
     "textlint",
     "rule",
@@ -11,13 +23,13 @@
   ],
   "main": "lib/index.js",
   "files": [
-    "lib/",
-    "src/"
+    "lib"
   ],
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "prepare": "git config --local core.hooksPath .githooks",
     "test": "textlint-scripts test",
     "build": "textlint-scripts build",
     "prepublish": "npm run --if-present build",
