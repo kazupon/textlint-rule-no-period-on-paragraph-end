@@ -28,6 +28,7 @@
   "directories": {
     "test": "test"
   },
+  "packageManager": "npm@10.8.0",
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
     "test": "textlint-scripts test",
