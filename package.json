@@ -5,6 +5,8 @@
   "author": "",
   "license": "MIT",
   "keywords": [
+    "textlint",
+    "rule",
     "textlintrule"
   ],
   "main": "lib/index.js",
