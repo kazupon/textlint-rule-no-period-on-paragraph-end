@@ -1,0 +1,6 @@
+*.log
+*.tgz
+*.swp
+.eslintcache
+node_modules
+lib
