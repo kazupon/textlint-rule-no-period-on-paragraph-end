@@ -1,7 +1,7 @@
 {
   "name": "textlint-rule-no-period-on-paragraph-end",
   "description": "textlint rule for no period on paragraph end",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "kazuya kawaguchi",
     "email": "kawakazu80@gmail.com"
