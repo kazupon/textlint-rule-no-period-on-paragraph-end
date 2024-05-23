@@ -7,7 +7,7 @@ const PERIODS = ['.', '。'] as const
 const report: TextlintRuleModule<Options> = (context, _options = {}) => {
   const { Syntax, RuleError, report, fixer, getSource, locator } = context
   return {
-    [Syntax.Paragraph](node) {
+    [Syntax.Str](node) {
       const text = getSource(node)
       const period = PERIODS.find(period => text.endsWith(period))
       if (period) {
