@@ -16,7 +16,7 @@ tester.run('no-period-on-paragraph-end', rule, {
       text: 'This is simple paragraph.',
       errors: [
         {
-          message: 'The paragraph has a period.',
+          message: 'The paragraph has a period (".").',
           range: [24, 25]
         }
       ]
@@ -26,7 +26,7 @@ tester.run('no-period-on-paragraph-end', rule, {
       text: 'This paragraph has multiple sentences. First sentence is here. And the last sentence is here.',
       errors: [
         {
-          message: 'The paragraph has a period.',
+          message: 'The paragraph has a period (".").',
           range: [92, 93]
         }
       ]
@@ -36,7 +36,7 @@ tester.run('no-period-on-paragraph-end', rule, {
       text: 'これはシンプルな段落。',
       errors: [
         {
-          message: 'The paragraph has a period.',
+          message: 'The paragraph has a period ("。").',
           range: [10, 11]
         }
       ]
@@ -46,7 +46,7 @@ tester.run('no-period-on-paragraph-end', rule, {
       text: 'この段落には複数の文がある。これが最初、そしてこれが最後の文。',
       errors: [
         {
-          message: 'The paragraph has a period.',
+          message: 'The paragraph has a period ("。").',
           range: [30, 31]
         }
       ]
@@ -56,7 +56,7 @@ tester.run('no-period-on-paragraph-end', rule, {
       text: 'この段落には複数の文がある。First sentence is here. そしてこれが最後の文。',
       errors: [
         {
-          message: 'The paragraph has a period.',
+          message: 'The paragraph has a period ("。").',
           range: [48, 49]
         }
       ]
