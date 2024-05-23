@@ -14,7 +14,7 @@ const report: TextlintRuleModule<Options> = (context, _options = {}) => {
         const targetRange = [text.length - 1, text.length] as const
         report(
           node,
-          new RuleError('The paragraph has a period.', {
+          new RuleError(`The paragraph has a period ("${period}").`, {
             padding: locator.range(targetRange)
           })
         )
