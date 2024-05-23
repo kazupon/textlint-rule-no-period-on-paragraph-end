@@ -5,7 +5,7 @@ interface Options {}
 const PERIODS = ['.', '。'] as const
 
 const report: TextlintRuleModule<Options> = (context, _options = {}) => {
-  const { Syntax, RuleError, report, getSource, locator } = context
+  const { Syntax, RuleError, report, fixer, getSource, locator } = context
   return {
     [Syntax.Paragraph](node) {
       const text = getSource(node)
@@ -15,7 +15,8 @@ const report: TextlintRuleModule<Options> = (context, _options = {}) => {
         report(
           node,
           new RuleError(`The paragraph has a period ("${period}").`, {
-            padding: locator.range(targetRange)
+            padding: locator.range(targetRange),
+            fix: fixer.removeRange(targetRange)
           })
         )
       }
@@ -23,4 +24,7 @@ const report: TextlintRuleModule<Options> = (context, _options = {}) => {
   }
 }
 
-export default report
+export default {
+  linter: report,
+  fixer: report
+}

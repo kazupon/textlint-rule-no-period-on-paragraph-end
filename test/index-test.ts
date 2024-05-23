@@ -14,6 +14,7 @@ tester.run('no-period-on-paragraph-end', rule, {
     // simple paragraph
     {
       text: 'This is simple paragraph.',
+      output: 'This is simple paragraph',
       errors: [
         {
           message: 'The paragraph has a period (".").',
@@ -24,6 +25,8 @@ tester.run('no-period-on-paragraph-end', rule, {
     // multiple sentences in paragraph
     {
       text: 'This paragraph has multiple sentences. First sentence is here. And the last sentence is here.',
+      output:
+        'This paragraph has multiple sentences. First sentence is here. And the last sentence is here',
       errors: [
         {
           message: 'The paragraph has a period (".").',
@@ -34,6 +37,7 @@ tester.run('no-period-on-paragraph-end', rule, {
     // simple paragraph in Japanese
     {
       text: 'これはシンプルな段落。',
+      output: 'これはシンプルな段落',
       errors: [
         {
           message: 'The paragraph has a period ("。").',
@@ -44,6 +48,7 @@ tester.run('no-period-on-paragraph-end', rule, {
     // multiple sentences in paragraph in Japanese
     {
       text: 'この段落には複数の文がある。これが最初、そしてこれが最後の文。',
+      output: 'この段落には複数の文がある。これが最初、そしてこれが最後の文',
       errors: [
         {
           message: 'The paragraph has a period ("。").',
@@ -54,6 +59,8 @@ tester.run('no-period-on-paragraph-end', rule, {
     // mixing English and Japanese
     {
       text: 'この段落には複数の文がある。First sentence is here. そしてこれが最後の文。',
+      output:
+        'この段落には複数の文がある。First sentence is here. そしてこれが最後の文',
       errors: [
         {
           message: 'The paragraph has a period ("。").',
