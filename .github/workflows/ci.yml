@@ -24,7 +24,7 @@ jobs:
       - name: Checkout codes
         uses: actions/checkout@v4
       - name: Spell check
-        uses: crate-ci/typos@v1.24.1
+        uses: crate-ci/typos@v1.24.3
 
   lint:
     runs-on: ${{ matrix.os }}
