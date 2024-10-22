@@ -54,7 +54,7 @@
     "eslint": "^8.56.0",
     "gh-changelogen": "^0.2.8",
     "lint-staged": "^15.2.4",
-    "npm-run-all2": "^6.2.0",
+    "npm-run-all2": "^7.0.0",
     "pkg-types": "^1.1.1",
     "prettier": "^3.2.5",
     "textlint-scripts": "^14.0.4",
