@@ -28,7 +28,7 @@
   "directories": {
     "test": "test"
   },
-  "packageManager": "npm@10.9.1",
+  "packageManager": "npm@10.9.2",
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
     "prepublish": "npm run build",
