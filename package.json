@@ -61,7 +61,7 @@
     "textlint-tester": "^14.0.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.10.0"
+    "typescript-eslint": "^8.0.0"
   },
   "lint-staged": {
     "*.{json,md,yml}": [
