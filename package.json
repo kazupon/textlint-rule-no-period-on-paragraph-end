@@ -46,12 +46,12 @@
     "fix:eslint": "npm run lint:eslint -- --fix"
   },
   "devDependencies": {
-    "@eslint/js": "^8.56.0",
+    "@eslint/js": "^9.0.0",
     "@textlint/types": "^14.0.4",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.12",
     "bumpp": "^9.4.1",
-    "eslint": "^8.56.0",
+    "eslint": "^9.0.0",
     "gh-changelogen": "^0.2.8",
     "lint-staged": "^15.2.4",
     "npm-run-all2": "^6.2.0",
