@@ -22,7 +22,7 @@ jobs:
     name: Spell check
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Spell check
         uses: crate-ci/typos@v1.33.1
 
@@ -36,7 +36,7 @@ jobs:
     name: Lint on Node.js ${{ matrix.node-version }}
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Enable corepack
         run: corepack enable
@@ -63,7 +63,7 @@ jobs:
     name: Build on Node.js ${{ matrix.node-version }}
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Enable corepack
         run: corepack enable
@@ -92,7 +92,7 @@ jobs:
     name: Test on Node.js ${{ matrix.node-version }}
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Enable corepack
         run: corepack enable
@@ -123,7 +123,7 @@ jobs:
     name: Nightly release
     steps:
       - name: Checkout codes
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Enable corepack
         run: corepack enable
