@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^8.56.0",
-    "@textlint/types": "^14.0.4",
+    "@textlint/types": "^15.0.0",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.12",
     "bumpp": "^9.4.1",
